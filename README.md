@@ -128,3 +128,14 @@ plt.tight_layout()
 plt.show()
 ```
 # Output Waveform
+
+#PCM
+<img width="1189" height="990" alt="image" src="https://github.com/user-attachments/assets/5d4a2b45-ce3d-4fad-bb13-53387221569c" />
+
+#DM
+<img width="1203" height="590" alt="image" src="https://github.com/user-attachments/assets/c135a9c0-ce66-4cbd-bcb0-5e6ed6838b4d" />
+
+# Results
+Thus, Pulse Code Modulation (PCM) with quantisation, modulation, and demodulation was obtained and the output waveforms were verified.
+
+Thus, Delta Modulation and its corresponding demodulation with low-pass filtering were obtained and the output waveforms were verified.
