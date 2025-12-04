@@ -17,21 +17,26 @@ clock_signal = np.sign(np.sin(2 * np.pi * 200 * t))
 quant_step = (message_signal.max() - message_signal.min()) / quantization_levels
 quantized_signal = np.round(message_signal / quant_step) * quant_step
 pcm_signal = ((quantized_signal - quantized_signal.min()) / quant_step).astype(int)
+
 plt.figure(figsize=(12, 10))
 plt.subplot(4, 1, 1); plt.plot(t, message_signal, color='blue'); plt.title("Message Signal");
 plt.grid(True)
+
 plt.subplot(4, 1, 2);
 plt.plot(t, clock_signal, color='green');
 plt.title("Clock Signal");
 plt.grid(True)
+
 plt.subplot(4, 1, 3);
 plt.step(t, quantized_signal, color='red');
 plt.title("PCM Modulated Signal");
 plt.grid(True)
+
 plt.subplot(4, 1, 4);
 plt.plot(t, quantized_signal, color='purple', linestyle='--');
 plt.title("PCM Demodulation Signal");
 plt.grid(True)
+
 plt.tight_layout()
 plt.show()
 
