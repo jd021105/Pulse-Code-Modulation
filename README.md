@@ -19,7 +19,9 @@ quantized_signal = np.round(message_signal / quant_step) * quant_step
 pcm_signal = ((quantized_signal - quantized_signal.min()) / quant_step).astype(int)
 
 plt.figure(figsize=(12, 10))
-plt.subplot(4, 1, 1); plt.plot(t, message_signal, color='blue'); plt.title("Message Signal");
+plt.subplot(4, 1, 1);
+plt.plot(t, message_signal, color='blue');
+plt.title("Message Signal");
 plt.grid(True)
 
 plt.subplot(4, 1, 2);
